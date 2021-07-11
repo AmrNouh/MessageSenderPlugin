@@ -43,11 +43,12 @@
         '
         Me.PnlSearch.Controls.Add(Me.SrhCutomers)
         Me.PnlSearch.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PnlSearch.Location = New System.Drawing.Point(0, 35)
+        Me.PnlSearch.Location = New System.Drawing.Point(0, 41)
+        Me.PnlSearch.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PnlSearch.Name = "PnlSearch"
-        Me.PnlSearch.Padding = New System.Windows.Forms.Padding(10, 9, 10, 9)
+        Me.PnlSearch.Padding = New System.Windows.Forms.Padding(10, 11, 10, 11)
         Me.PnlSearch.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.PnlSearch.Size = New System.Drawing.Size(363, 40)
+        Me.PnlSearch.Size = New System.Drawing.Size(363, 47)
         Me.PnlSearch.TabIndex = 3
         '
         'SrhCutomers
@@ -55,7 +56,8 @@
         Me.SrhCutomers.Client = Me.TLTemplates
         Me.SrhCutomers.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SrhCutomers.EditValue = ""
-        Me.SrhCutomers.Location = New System.Drawing.Point(10, 9)
+        Me.SrhCutomers.Location = New System.Drawing.Point(10, 11)
+        Me.SrhCutomers.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SrhCutomers.Name = "SrhCutomers"
         Me.SrhCutomers.Properties.AdvancedModeOptions.AllowCaretAnimation = DevExpress.Utils.DefaultBoolean.[True]
         Me.SrhCutomers.Properties.AdvancedModeOptions.AllowSelectionAnimation = DevExpress.Utils.DefaultBoolean.[True]
@@ -88,7 +90,8 @@
         Me.TLTemplates.Appearance.SelectedRow.Options.UseBackColor = true
         Me.TLTemplates.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.ColName})
         Me.TLTemplates.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TLTemplates.Location = New System.Drawing.Point(0, 75)
+        Me.TLTemplates.Location = New System.Drawing.Point(0, 88)
+        Me.TLTemplates.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TLTemplates.Name = "TLTemplates"
         Me.TLTemplates.OptionsBehavior.Editable = false
         Me.TLTemplates.OptionsView.FocusRectStyle = DevExpress.XtraTreeList.DrawFocusRectStyle.None
@@ -102,9 +105,9 @@
         Me.TLTemplates.OptionsView.ShowTreeLines = DevExpress.Utils.DefaultBoolean.[False]
         Me.TLTemplates.OptionsView.ShowVertLines = false
         Me.TLTemplates.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TLTemplates.RowHeight = 50
+        Me.TLTemplates.RowHeight = 59
         Me.TLTemplates.SelectImageList = Me.SvgImageCollection
-        Me.TLTemplates.Size = New System.Drawing.Size(363, 497)
+        Me.TLTemplates.Size = New System.Drawing.Size(363, 588)
         Me.TLTemplates.TabIndex = 4
         '
         'ColName
@@ -134,22 +137,24 @@
         Me.PnlTilte.Controls.Add(Me.LblCustomers)
         Me.PnlTilte.Dock = System.Windows.Forms.DockStyle.Top
         Me.PnlTilte.Location = New System.Drawing.Point(0, 0)
+        Me.PnlTilte.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PnlTilte.Name = "PnlTilte"
         Me.PnlTilte.Padding = New System.Windows.Forms.Padding(11, 0, 11, 0)
         Me.PnlTilte.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.PnlTilte.Size = New System.Drawing.Size(363, 35)
+        Me.PnlTilte.Size = New System.Drawing.Size(363, 41)
         Me.PnlTilte.TabIndex = 2
         '
         'BtnSMSTemplate
         '
         Me.BtnSMSTemplate.Dock = System.Windows.Forms.DockStyle.Left
         Me.BtnSMSTemplate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter
-        Me.BtnSMSTemplate.ImageOptions.SvgImage = CType(resources.GetObject("BtnAddCustomer.ImageOptions.SvgImage"),DevExpress.Utils.Svg.SvgImage)
+        Me.BtnSMSTemplate.ImageOptions.SvgImage = CType(resources.GetObject("BtnSMSTemplate.ImageOptions.SvgImage"),DevExpress.Utils.Svg.SvgImage)
         Me.BtnSMSTemplate.Location = New System.Drawing.Point(11, 0)
+        Me.BtnSMSTemplate.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.BtnSMSTemplate.Name = "BtnSMSTemplate"
         Me.BtnSMSTemplate.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light
         Me.BtnSMSTemplate.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.[False]
-        Me.BtnSMSTemplate.Size = New System.Drawing.Size(40, 35)
+        Me.BtnSMSTemplate.Size = New System.Drawing.Size(40, 41)
         Me.BtnSMSTemplate.TabIndex = 4
         Me.BtnSMSTemplate.Text = "SimpleButton1"
         '
@@ -162,21 +167,23 @@
         Me.LblCustomers.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
         Me.LblCustomers.Dock = System.Windows.Forms.DockStyle.Right
         Me.LblCustomers.Location = New System.Drawing.Point(130, 0)
+        Me.LblCustomers.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LblCustomers.Name = "LblCustomers"
-        Me.LblCustomers.Size = New System.Drawing.Size(222, 35)
+        Me.LblCustomers.Size = New System.Drawing.Size(222, 41)
         Me.LblCustomers.TabIndex = 5
         Me.LblCustomers.Text = "قوالب الرسائل"
         '
         'CtlMsgTemplate
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 11!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.TLTemplates)
         Me.Controls.Add(Me.PnlSearch)
         Me.Controls.Add(Me.PnlTilte)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "CtlMsgTemplate"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Size = New System.Drawing.Size(363, 572)
+        Me.Size = New System.Drawing.Size(363, 676)
         Me.PnlSearch.ResumeLayout(false)
         CType(Me.SrhCutomers.Properties,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.TLTemplates,System.ComponentModel.ISupportInitialize).EndInit

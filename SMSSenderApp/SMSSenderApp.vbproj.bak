@@ -46,14 +46,22 @@
     <Reference Include="DevExpress.Data.Desktop.v21.1" />
     <Reference Include="DevExpress.Utils.v21.1" />
     <Reference Include="DevExpress.Sparkline.v21.1.Core" />
-    <Reference Include="DevExpress.XtraBars.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v21.1" />
     <Reference Include="DevExpress.Printing.v21.1.Core" />
+    <Reference Include="DevExpress.XtraGrid.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Dexef.Definition">
+      <HintPath>..\..\..\dll Files\Dexef.Definition.dll</HintPath>
+    </Reference>
     <Reference Include="SkinGray">
       <HintPath>E:\Work\Project\SkinGray.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,11 +83,79 @@
     <Import Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cls\ClsDef.vb" />
+    <Compile Include="Cls\SQLControl.vb" />
+    <Compile Include="Forms\Groups\FrmGroupProperties.Designer.vb">
+      <DependentUpon>FrmGroupProperties.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Groups\FrmGroupProperties.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Messages\FrmAddCustomer.Designer.vb">
+      <DependentUpon>FrmAddCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Messages\FrmAddCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Groups\Controls\CtlGroupMessageHistory.Designer.vb">
+      <DependentUpon>CtlGroupMessageHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Groups\Controls\CtlGroupMessageHistory.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Groups\Controls\CtlGroupsHome.Designer.vb">
+      <DependentUpon>CtlGroupsHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Groups\Controls\CtlGroupsHome.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Groups\FrmAddCustomerToGroup.Designer.vb">
+      <DependentUpon>FrmAddCustomerToGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Groups\FrmAddCustomerToGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Groups\FrmAddGroup.Designer.vb">
+      <DependentUpon>FrmAddGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Groups\FrmAddGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Messages\Controls\CtlMessagesHistory.Designer.vb">
+      <DependentUpon>CtlMessagesHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Messages\Controls\CtlMessagesHistory.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Forms\Messages\Controls\CtlMessagesHome.Designer.vb">
       <DependentUpon>CtlMessagesHome.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\Messages\Controls\CtlMessagesHome.vb">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Messages\Controls\CtlMSGTemplate.Designer.vb">
+      <DependentUpon>CtlMSGTemplate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Messages\Controls\CtlMSGTemplate.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Messages\FrmAddAutomaticMessage.Designer.vb">
+      <DependentUpon>FrmAddAutomaticMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Messages\FrmAddAutomaticMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Messages\FrmMessageTemplate.Designer.vb">
+      <DependentUpon>FrmMessageTemplate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Messages\FrmMessageTemplate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Messages\FrmSMSTemplate.Designer.vb">
+      <DependentUpon>FrmSMSTemplate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Messages\FrmSMSTemplate.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSMSHome.vb">
       <SubType>Form</SubType>
@@ -92,12 +168,46 @@
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
+    <EmbeddedResource Include="Forms\Groups\FrmGroupProperties.resx">
+      <DependentUpon>FrmGroupProperties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Messages\FrmAddCustomer.resx">
+      <DependentUpon>FrmAddCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Groups\Controls\CtlGroupMessageHistory.resx">
+      <DependentUpon>CtlGroupMessageHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Groups\Controls\CtlGroupsHome.resx">
+      <DependentUpon>CtlGroupsHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Groups\FrmAddCustomerToGroup.resx">
+      <DependentUpon>FrmAddCustomerToGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Groups\FrmAddGroup.resx">
+      <DependentUpon>FrmAddGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Messages\Controls\CtlMessagesHistory.resx">
+      <DependentUpon>CtlMessagesHistory.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Messages\Controls\CtlMessagesHome.resx">
       <DependentUpon>CtlMessagesHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Messages\Controls\CtlMSGTemplate.resx">
+      <DependentUpon>CtlMSGTemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Messages\FrmAddAutomaticMessage.resx">
+      <DependentUpon>FrmAddAutomaticMessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Messages\FrmMessageTemplate.resx">
+      <DependentUpon>FrmMessageTemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Messages\FrmSMSTemplate.resx">
+      <DependentUpon>FrmSMSTemplate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSMSHome.resx">
       <DependentUpon>FrmSMSHome.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
